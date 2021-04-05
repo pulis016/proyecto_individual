@@ -1,0 +1,34 @@
+*{
+	font-family: arial;
+
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background:  #72EC39;
+    border-radius: 4px;
+}
+ul img{
+	border-radius: 50px;
+	height:60px;
+	width:60px;
+	margin: 8px;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+li a:hover {
+    background-color: #63D130;
+}
+
+div.
