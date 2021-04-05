@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Iniciar sesion</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/style-form.css">
+  <script type="text/javascript">
+    function validate(form){
+        falla = validausuario(form.usuario.value)
+        falla += validacontraseña(form.contraseña.value)
+        if (falla == "") return true
+            else {
+                alert (falla); return false 
+            }
+      }
+      function validausuario(field){
+        if (field == "") return "Debe ingresar el nombre de usuario. \n"                        
+        else if (field.length <4) return "El nombre de ususario debe tener almenos 4 caracteres. \n"
+        else if (/[^a-zA-Z0-9_-]/.test(field)) return "Solo se permite de la A-Z , a-z y del 0-9 en el nombre del usuario. \n" 
+            return "" 
+      }
+      function validacontraseña(field){
+        if (field == "") return "Debe ingresar la contraseña. \n " 
+            else if (field.length < 4)
+                return "La contraseña solo puede tener 5 caracteres. \n"
+            else if (! /[a-z]/.test(field))
+                return "La contraseña requiere letras en minusculas de la a-z. \n"
+            return ""
+      }
+      function mensaje(texto) {
+    alert(texto);
+  }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Iniciar Sesion</h1>
+    <img src="img/biblioteca.png"><br>
+    <form class="formulario" action="ingresar_socio.php" method="post" onsubmit="return validate(this)">
+      <p>Nombre socio :</p> 
+      <input type="text" name="usuario"  class="field"><br>
+      <p>Contraseña :</p>
+      <input type="password" name="contraseña"  class="field"><br>
+        <input type="submit" name="ingresar"  value="Ingresar" class="boton"><br>
+        <input type="button" onclick="mensaje('se ha enviado un correo para la recuperacion de contraseña')" value="¿Olvidaste tu contraseña?" class="boton"><br>
+        <input type="button"  value="Registrase" class="boton"><br>
+    </form>
+  </div>
+</body>
+</html>

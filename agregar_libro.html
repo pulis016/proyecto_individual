@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Agregar un libro</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		
+	</script>
+</head>
+<body>
+	<table class="registrarse" border="0" cellpading="2" cellspacing="5" bgcolor="#eeeeee">
+        <th colspan="2" align="center">Agregar libro</th>
+        <form action="agregar_libro.php" onsubmit="return validate(this)">
+            <tr>
+                <tr>
+                <td>Titulo</td>
+                <td><input type="text" name="titulolib"></td>
+                </tr>
+                <tr>
+                <td>Numero de paginas</td>
+                <td><input type="number" name="numpag"></td>
+                </tr>
+                <tr>
+                <td>Dias de prestamo</td>
+                <td><input type="number"  name="diaspres"></td>
+                </tr>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Agregar"><br>
+                    <a href="libros.php">Cancelar y volver</a>
+                </td>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>
